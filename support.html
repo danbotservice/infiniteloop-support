@@ -22,8 +22,9 @@
 
 <h2>Getting started</h2>
 <ul>
-  <li>Tap <strong>Explore a demo</strong> on the connect screen to see how it works with no setup.</li>
-  <li>To connect your own machine: enter its name or IP address (Tailscale names work too), your username, and your login password once. InfiniteLoop then sets up its own key so you won't need the password again. Nothing is stored outside your device.</li>
+  <li>Open your Loop and use <strong>Mission Control</strong> to view available sessions or add a connection for a Mac or Linux computer.</li>
+  <li>If <strong>Explore a demo</strong> is offered, you can use it to see sample sessions without connecting a computer or entering SSH credentials.</li>
+  <li>To connect your own machine: enter its name or IP address (Tailscale names work too), your username, and the sign-in method requested by the app. When password sign-in is used, the password is stored in your device's Keychain and may be used to install and use the device's SSH key. The connection endpoint and session settings are stored locally in the app.</li>
 </ul>
 
 <h2>Requirements</h2>
@@ -32,7 +33,8 @@
 <h2>Common questions</h2>
 <ul>
   <li><strong>Do I need an account?</strong> No.</li>
-  <li><strong>Where are my credentials stored?</strong> Only in your device's Keychain. They never leave your device except to connect to your machine.</li>
+  <li><strong>Where are my connection details stored?</strong> The endpoint and session settings are stored locally on your device. Passwords, SSH identity keys, and host-trust records use the device Keychain. They are used to connect directly to the computer you selected.</li>
+  <li><strong>What happens when I tap a terminal link?</strong> Supported HTTP and HTTPS links open on your device. The website you open may handle data under its own terms and privacy policy; the page content is not sent to InfiniteLoop's servers.</li>
   <li><strong>Which agents are supported?</strong> Claude Code and Codex, running in your terminal.</li>
 </ul>
 
