@@ -17,27 +17,39 @@
 <body>
 <nav><a href="./">Home</a> · <a href="./privacy.html">Privacy</a> · <a href="./support.html">Support</a></nav>
 <h1>InfiniteLoop — Privacy Policy</h1>
-<p class="updated">Last updated: 10 September 2026</p>
+<p class="updated">Last updated: 29 September 2026</p>
 
-<p>InfiniteLoop is a tool for directing your own coding agents on your own computers. It is designed to keep your data on your device and under your control.</p>
+<p>InfiniteLoop (listed on the App Store as “Infinite-Loop”) is a tool for directing your own coding agents on your own computers. It is designed to keep your data on your device and under your control.</p>
 
 <h2>What we collect: nothing</h2>
 <p>InfiniteLoop does not collect, transmit to us, sell, or share any personal data. We operate no analytics, advertising, tracking, or telemetry, and we run no servers that receive your data.</p>
 
 <h2>Your connection details stay on your device</h2>
-<p>When you connect InfiniteLoop to your own Mac or Linux computer, the address, username, and credentials you enter are stored only in the iOS Keychain on your device. They are used solely to establish your SSH connection to the computer you chose. They are never sent to us and never leave your device except to connect directly to your own machine.</p>
+<p>When you connect InfiniteLoop to your own Mac or Linux computer, your passwords and SSH keys are stored only in the iOS Keychain on your device (marked device-only and not synced), along with the host key used to verify your computer. Other connection settings you enter, such as the host address, port, username, and connection names, are stored on your device in the app's local storage (app preferences and files inside the app's container), not in the Keychain. These settings may be included in your own device backups, according to your Apple backup settings. All of this is used solely to establish your SSH connection to the computer you chose. It is never sent to us. It leaves your device only to connect directly to your own machine, and as part of any device backups you make.</p>
 
 <h2>Your sessions are yours</h2>
 <p>Terminal output, files, and any content from the computers you connect to are relayed directly between your device and your machine over an encrypted SSH connection. We do not see, store, or process that content.</p>
 
+<h2>Files, local network, clipboard and notifications</h2>
+<p>Files you upload, download or save to the Files app move directly between your device and your computer over the same SSH connection. InfiniteLoop asks for Local Network access only so it can reach your own computers on your network or over Tailscale. It sees only the photos you pick in the system photo picker, not your photo library. Programs on your computer may place text on your device's clipboard, but InfiniteLoop does not let them read it. Notifications about your sessions are created on your device and are not sent through any server. The “Explore a demo” mode runs entirely on your device and connects to nothing.</p>
+
+<h2>AI coding agents on your computer</h2>
+<p>Content you send from InfiniteLoop, such as prompts, messages, and attached photos, is sent to your selected computer. Coding agents running there may send it to their configured AI provider under your account and settings. InfiniteLoop's developer does not receive this content, and we collect nothing. Any AI provider's handling of that content is governed by that provider's own terms and privacy policy under your own account with them, not by this policy.</p>
+
 <h2>Photos you attach</h2>
 <p>If you attach a photo to send to your agent, it is uploaded directly to the computer you are connected to, for that agent to use. It is not sent to us.</p>
+
+<h2>How long data is kept, and how to delete it</h2>
+<p>Everything InfiniteLoop stores stays on your device until you delete it. Deleting the app removes its settings and files from your device. Passwords and keys saved in the iOS Keychain are device-only; iOS may keep Keychain items after an app is deleted, and they are removed when you erase the device. Because we never receive your data, we hold nothing about you to delete. When you first sign in with a password, InfiniteLoop adds this device's public key to <code>~/.ssh/authorized_keys</code> on your computer so it can connect without the password next time; you can remove that line on your computer at any time to revoke the device's access.</p>
+
+<h2>Web browser pane</h2>
+<p>InfiniteLoop includes an in-app web browser pane (built on Apple's WebKit). Pages you open there are loaded directly from those third-party websites, which have their own privacy policies and may collect information such as your IP address; we do not receive it. The browser uses a non-persistent website data store, so cookies and other site data are kept only in memory, are never written to disk, and are discarded when you close or clear the pane or quit the app. Links you open outside InfiniteLoop, including the link to this policy, open in your default browser under its own privacy settings.</p>
 
 <h2>No account</h2>
 <p>InfiniteLoop requires no account or sign-in with us.</p>
 
 <h2>Third parties</h2>
-<p>InfiniteLoop includes no third-party analytics or advertising SDKs. Apple processes App Store transactions and TestFlight under Apple's own privacy policy; we receive no personal data from Apple beyond anonymous, aggregate App Store metrics.</p>
+<p>InfiniteLoop includes no third-party analytics or advertising SDKs. Apple processes App Store downloads and TestFlight under Apple's own privacy policy. From Apple we receive only aggregate App Store metrics, crash reports if you have chosen to share analytics with app developers in your device settings, and, if you join the TestFlight beta, the name, email address and any feedback you submit to Apple for TestFlight.</p>
 
 <h2>Children</h2>
 <p>InfiniteLoop is a developer tool and is not directed at children.</p>
