@@ -3,42 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>InfiniteLoop — Support</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  h1 { font-size: 1.6rem; margin-bottom: .2em; }
-  h2 { font-size: 1.1rem; margin-top: 1.8em; }
-  a { color: #2b7de0; }
-  nav { margin-bottom: 24px; font-size: .95rem; }
-  ul { padding-left: 1.2em; }
-</style>
+<title>Infinite-Loop — Support</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav><a href="./">Home</a> · <a href="./privacy.html">Privacy</a> · <a href="./support.html">Support</a></nav>
-<h1>InfiniteLoop — Support</h1>
+<nav><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="press.html">Press</a></nav>
 
-<p>InfiniteLoop lets you direct long-running coding agents (Claude Code, Codex) on your own Mac or Linux computer from your iPhone or iPad, over SSH.</p>
+<h1>Infinite-Loop — Support</h1>
+<p>Infinite-Loop puts your own Mac or Linux computers on your iPhone and iPad: terminals, Mission Control, files and your Mac's desktop, over SSH.</p>
 
 <h2>Getting started</h2>
 <ul>
   <li>Tap <strong>Explore a demo</strong> on the connect screen to see how it works with no setup.</li>
-  <li>To connect your own machine: enter its name or IP address (Tailscale names work too), your username, and your login password once. InfiniteLoop then sets up its own key so you won't need the password again. Nothing is stored outside your device.</li>
+  <li>To connect your own computer, enter its name or IP address (Tailscale names work too), your username, and your login password once. Infinite-Loop then sets up its own key so you won't need the password again.</li>
 </ul>
 
-<h2>Requirements</h2>
-<p>A Mac or Linux computer you can reach (on the same network or via Tailscale) with SSH enabled and tmux installed.</p>
+<h2>What you need</h2>
+<ul>
+  <li>A Mac or Linux computer you can reach, on the same network or a private network such as Tailscale.</li>
+  <li>On a Mac: System Settings &gt; General &gt; Sharing &gt; Remote Login turned on.</li>
+  <li>tmux installed. If it's missing, the app tells you and shows how to install it, or you can open a plain shell.</li>
+  <li>For the Mac desktop: Screen Sharing turned on, in the same Sharing settings. Nothing else is installed on the Mac.</li>
+</ul>
 
 <h2>Common questions</h2>
 <ul>
   <li><strong>Do I need an account?</strong> No.</li>
-  <li><strong>Where are my credentials stored?</strong> Only in your device's Keychain. They never leave your device except to connect to your machine.</li>
-  <li><strong>Which agents are supported?</strong> Claude Code and Codex, running in your terminal.</li>
+  <li><strong>Where are my passwords and keys stored?</strong> In this device's Keychain, not synced. Addresses and usernames are kept in the app's storage on this device and can be part of your own device backups.</li>
+  <li><strong>Do you see my data?</strong> No. Your device talks directly to your computer and we run no server in between.</li>
+  <li><strong>How do I remove this device's access?</strong> Delete its line from <code>~/.ssh/authorized_keys</code> on your computer.</li>
+  <li><strong>Does it work with coding agents?</strong> Anything that runs in your terminal works, including Claude Code and Codex. They are separate products and need their own accounts. Infinite-Loop is not affiliated with or endorsed by Anthropic or OpenAI.</li>
+  <li><strong>My Mac's desktop won't open.</strong> Check that Screen Sharing is on and that Remote Login works. The pane says what it found; please include that message when you write to us.</li>
 </ul>
 
-<h2>Contact &amp; help</h2>
-<p>Please <a href="https://github.com/danbotservice/infiniteloop-support/issues">open an issue</a> and we'll help. We aim to respond within a few business days.</p>
+<h2>Contact and help</h2>
+<p>Please <a href="https://github.com/danbotservice/infiniteloop-support/issues">open an issue</a> and we'll help. We aim to respond within a few business days. For anything private, email <a href="mailto:danbotservice@gmail.com">danbotservice@gmail.com</a>.</p>
 
-<p style="margin-top:2em"><a href="./privacy.html">Privacy Policy</a></p>
+<h2>Security</h2>
+<p>If you think you've found a security problem, please email the address above rather than opening a public issue. Security notices, if any, appear on this page and in the app's release notes.</p>
+
+<footer><p><a href="privacy.html">Privacy Policy</a></p></footer>
 </body>
 </html>
